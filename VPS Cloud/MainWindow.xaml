@@ -6,8 +6,12 @@
         xmlns:local="clr-namespace:VPS_Cloud"
         xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
         mc:Ignorable="d"
-        Title="VPS Cloud" Height="450" Width="800">
-    <Grid Background="Red">
-        <Button Style="{DynamicResource AuthBT}" Width="100" Height="50"/>
+        Icon="/Assets/images/icon.png"
+        Title="VPS Cloud" Height="675" Width="1200">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/images/background.png"/>
+        </Grid.Background>
+        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>
