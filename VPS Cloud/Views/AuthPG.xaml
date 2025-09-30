@@ -15,17 +15,28 @@
             <StackPanel Width="300" Height="430">
                 <TextBlock Style="{StaticResource BigText}" Text="VPS Cloud" Margin="0 0 0 10" Foreground="{StaticResource BasicW}" HorizontalAlignment="Center"/>
                 <Border Padding="10" Style="{StaticResource MainBorder}" Margin="0 0 0 20" Width="300" Height="300" Background="{StaticResource BasicW}">
-                    <DockPanel Height="280">
-                        <TextBlock DockPanel.Dock="Top" Style="{StaticResource TitleText}" Text="Вход" HorizontalAlignment="Center"/>
-                        <StackPanel Margin="0 0 0 20" DockPanel.Dock="Top" VerticalAlignment="Center">
-                            <TextBox Style="{StaticResource AuthTB}" Tag="логин:"/>
-                            <PasswordBox Style="{StaticResource AuthPB}" Margin="0 20 0 0" Tag="пароль:"/>
+                    <Grid Height="280">
+                        <TextBlock x:Name="BlockTitle" Style="{StaticResource TitleText}" Text="Вход" HorizontalAlignment="Center"/>
+                        <StackPanel x:Name="AuthForm" Visibility="Visible" Margin="0 0 0 20" DockPanel.Dock="Top" VerticalAlignment="Center">
+                            <TextBox x:Name="LoginA" Style="{StaticResource AuthTB}" Tag="логин:"/>
+                            <PasswordBox x:Name="PasswordA" Style="{StaticResource AuthPB}" Margin="0 20 0 0" Tag="пароль:"/>
                         </StackPanel>
-                    </DockPanel>
+                        <StackPanel x:Name="RegForm" Visibility="Collapsed" VerticalAlignment="Center">
+                            <TextBox x:Name="PhoneR" Style="{StaticResource AuthTB}" Tag="телефон:"/>
+                            <TextBox x:Name="LoginR" Style="{StaticResource AuthTB}" Margin="0 20 0 0" Tag="логин:"/>
+                            <TextBox x:Name="PasswordR" Style="{StaticResource AuthTB}" Margin="0 20 0 0" Tag="пароль:"/>
+                        </StackPanel>
+                    </Grid>
                 </Border>
-                <StackPanel Orientation="Horizontal">
-                    <Button Width="140" Content="Регистрация" Foreground="{StaticResource BasicB}" Margin="0 0 20 0" Style="{StaticResource ButtonOutPanelWhite}"/>
-                    <Button Width="140" Content="Войти" Foreground="{StaticResource BasicW}" Style="{StaticResource ButtonOutPanel}"/>
+                <StackPanel Orientation="Horizontal" Visibility="Visible" x:Name="AuthFormBtn">
+                    <Button Width="140" x:Name="GoRegForm" Content="Регистрация" Foreground="{StaticResource BasicB}" Margin="0 0 20 0" Style="{StaticResource ButtonOutPanelWhite}" Click="GoRegForm_Click"/>
+                    <Button Width="140" x:Name="GoAuth" Content="Войти" Foreground="{StaticResource BasicW}" Style="{StaticResource ButtonOutPanel}" Click="GoAuth_Click"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Visibility="Collapsed" x:Name="RegFormBtn">
+                    <Button Width="100" Click="GoAuthForm_Click" x:Name="GoAuthForm" Content="Вход" Foreground="{StaticResource BasicB}" Margin="0 0 20 0" Style="{StaticResource ButtonOutPanelWhite}"/>
+                    <Button Width="180" Click="GoRegAndAuth_Click" x:Name="GoRegAndAuth" Foreground="{StaticResource BasicW}" Style="{StaticResource ButtonOutPanel}">
+                        <TextBlock Text="Зарегистрироваться и войти" FontSize="16" Width="170" TextWrapping="Wrap" HorizontalAlignment="Center" TextAlignment="Center"/>
+                    </Button>
                 </StackPanel>
             </StackPanel>
         </Border>
