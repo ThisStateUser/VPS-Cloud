@@ -21,10 +21,18 @@ namespace VPS_Cloud
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static MainWindow WindowGs { get; set; }
         public MainWindow()
         {
             InitializeComponent();
+            WindowGs = this;
             MainFrame.Content = new AuthPG();
+        }
+
+        public void AuthFrame()
+        {
+            MainFrame.SetValue(Grid.ColumnProperty, 1);
+            NavigationZone.Visibility = Visibility.Visible;
         }
     }
 }

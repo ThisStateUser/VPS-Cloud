@@ -6,12 +6,73 @@
         xmlns:local="clr-namespace:VPS_Cloud"
         xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
         mc:Ignorable="d"
+        MinHeight="675" 
+        MinWidth="1100"
         Icon="/Assets/images/icon.png"
         Title="VPS Cloud" Height="675" Width="1200">
     <Grid>
+        <!--Разграничение для навигации-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
         <Grid.Background>
             <ImageBrush ImageSource="/Assets/images/background.png"/>
         </Grid.Background>
-        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
+        <Frame x:Name="MainFrame" Grid.ColumnSpan="2" Grid.Column="0" NavigationUIVisibility="Hidden"/>
+        
+        <!--навигация-->
+        <Grid Background="{StaticResource BasicB}" Visibility="Collapsed" x:Name="NavigationZone">
+            <StackPanel VerticalAlignment="Center">
+                <Button Style="{StaticResource NavBT}" Margin="0 0 0 10">
+                    <StackPanel>
+                        <Icon:PackIconMaterial Kind="Account" Width="30" Height="30" Margin="0 0 0 3" HorizontalAlignment="Center"/>
+                        <TextBlock Style="{StaticResource SmallText}" FontWeight="Bold" Text="Аккаунт"/>
+                    </StackPanel>
+                </Button>
+                <Button Style="{StaticResource NavBT}">
+                    <StackPanel>
+                        <Icon:PackIconMaterial Kind="ListBox" Width="30" Height="30" Margin="0 0 0 3" HorizontalAlignment="Center"/>
+                        <TextBlock Style="{StaticResource SmallText}" FontWeight="Bold" Text="Магазин"/>
+                    </StackPanel>
+                </Button>
+                <Button Style="{StaticResource NavBT}">
+                    <StackPanel>
+                        <Icon:PackIconMaterial Kind="AccountGroup" Width="30" Height="30" Margin="0 0 0 3" HorizontalAlignment="Center"/>
+                        <TextBlock Style="{StaticResource SmallText}" FontWeight="Bold" Text="Люди"/>
+                    </StackPanel>
+                </Button>
+                <Button Style="{StaticResource NavBT}">
+                    <StackPanel>
+                        <Icon:PackIconMaterial Kind="AccountGroup" Width="30" Height="30" Margin="0 0 0 3" HorizontalAlignment="Center"/>
+                        <TextBlock Style="{StaticResource SmallText}" FontWeight="Bold" Text="Клиенты"/>
+                    </StackPanel>
+                </Button>
+                <Button Style="{StaticResource NavBT}">
+                    <StackPanel>
+                        <Icon:PackIconMaterial Kind="ListStatus" Width="30" Height="30" Margin="0 0 0 3" HorizontalAlignment="Center"/>
+                        <TextBlock Style="{StaticResource SmallText}" FontWeight="Bold" Text="CRM"/>
+                    </StackPanel>
+                </Button>
+                <Button Style="{StaticResource NavBT}">
+                    <StackPanel>
+                        <Icon:PackIconMaterial Kind="Strategy" Width="30" Height="30" Margin="0 0 0 3" HorizontalAlignment="Center"/>
+                        <TextBlock Style="{StaticResource SmallText}" FontWeight="Bold" Text="Отчеты"/>
+                    </StackPanel>
+                </Button>
+                <Button Style="{StaticResource NavBT}">
+                    <StackPanel>
+                        <Icon:PackIconMaterial Kind="BeakerQuestion" Width="30" Height="30" Margin="0 0 0 3" HorizontalAlignment="Center"/>
+                        <TextBlock Style="{StaticResource SmallText}" FontWeight="Bold" Text="Логи"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+            <Button Style="{StaticResource NavBT}" VerticalAlignment="Bottom">
+                <StackPanel>
+                    <Icon:PackIconMaterial Kind="LogoutVariant" Width="30" Height="30" Margin="0 0 0 3" HorizontalAlignment="Center"/>
+                    <TextBlock Style="{StaticResource SmallText}" FontWeight="Bold" Text="Выход"/>
+                </StackPanel>
+            </Button>
+        </Grid>
     </Grid>
 </Window>

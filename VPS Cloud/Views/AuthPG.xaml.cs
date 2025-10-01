@@ -36,7 +36,8 @@ namespace VPS_Cloud.Views
 
         private void GoAuth_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new CHomePG());
+            MainWindow.WindowGs.AuthFrame();
+            NavigationService.Navigate(new PersonAccountPG());
         }
 
         private void GoAuthForm_Click(object sender, RoutedEventArgs e)
