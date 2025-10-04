@@ -1,12 +1,12 @@
-﻿<Page x:Class="VPS_Cloud.Views.Admin.LogsPG"
+﻿<Page x:Class="VPS_Cloud.Views.Manager.CRMPG"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:VPS_Cloud.Views.Admin"
+      xmlns:local="clr-namespace:VPS_Cloud.Views.Manager"
       mc:Ignorable="d" 
       d:DesignHeight="675" d:DesignWidth="1100"
-      Title="LogsPG">
+      Title="CRMPG">
 
     <Grid>
         

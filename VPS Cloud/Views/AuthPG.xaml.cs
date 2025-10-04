@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using VPS_Cloud.Views.Admin;
 using VPS_Cloud.Views.Client;
 
 namespace VPS_Cloud.Views
@@ -37,7 +38,7 @@ namespace VPS_Cloud.Views
         private void GoAuth_Click(object sender, RoutedEventArgs e)
         {
             MainWindow.WindowGs.AuthFrame();
-            NavigationService.Navigate(new PersonAccountPG());
+            NavigationService.Navigate(new CatalogPG());
         }
 
         private void GoAuthForm_Click(object sender, RoutedEventArgs e)

@@ -8,7 +8,64 @@
       d:DesignHeight="675" d:DesignWidth="1100"
       Title="CatalogPG">
 
-    <Grid>
-        
+    <Grid Margin="30">
+        <ScrollViewer>
+            <StackPanel Margin="0 0 30 0">
+                
+                <Border Margin="0 0 0 30" Style="{StaticResource MainBorder}">
+                    <Border.Background>
+                        <SolidColorBrush Color="{StaticResource BasicBColor}" Opacity="0.4"/>
+                    </Border.Background>
+                    <StackPanel Margin="0 10 0 30">
+                        <TextBlock HorizontalAlignment="Center" Foreground="{StaticResource BasicW}" Margin="0 0 0 10" Text="Дата-центры" Style="{StaticResource TitleText}"/>
+                        <ListBox ItemsSource="{d:SampleData ItemCount=5}" Background="Transparent">
+                            <ListBox.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapPanel Width="900" HorizontalAlignment="Center"/>
+                                </ItemsPanelTemplate>
+                            </ListBox.ItemsPanel>
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Border Width="170" Height="170" Background="{StaticResource BasicW}" Style="{StaticResource PanelBorder}">
+
+                                    </Border>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </StackPanel>
+                </Border>
+
+                <Border Style="{StaticResource MainBorder}">
+                    <Border.Background>
+                        <SolidColorBrush Color="{StaticResource BasicBColor}" Opacity="0.4"/>
+                    </Border.Background>
+                    <StackPanel Margin="0 10 0 30">
+                        <TextBlock HorizontalAlignment="Center" Foreground="{StaticResource BasicW}" Margin="0 0 0 10" Text="VPS" Style="{StaticResource TitleText}"/>
+                        <ComboBox SelectedItem="1" x:Name="CategoryVPSSelector" Style="{StaticResource BasicCB}" Width="300">
+                            <ComboBoxItem Content="Базовый"/>
+                            <ComboBoxItem Content="Профессиональный"/>
+                            <ComboBoxItem Content="Профессиональный Плюс"/>
+                        </ComboBox>
+                        <ListBox Margin="0 10 0 10" ItemsSource="{d:SampleData ItemCount=9}" Background="Transparent">
+                            <ListBox.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapPanel Width="900" HorizontalAlignment="Center"/>
+                                </ItemsPanelTemplate>
+                            </ListBox.ItemsPanel>
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Border Width="170" Height="230" Background="{StaticResource BasicW}" Style="{StaticResource PanelBorder}">
+                                        <StackPanel>
+                                            
+                                        </StackPanel>
+                                    </Border>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </StackPanel>
+                </Border>
+
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>

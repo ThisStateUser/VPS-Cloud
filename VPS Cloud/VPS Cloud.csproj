@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ControlzEx, Version=4.0.0.0, Culture=neutral, PublicKeyToken=69f1c32f803d307e, processorArchitecture=MSIL">
+      <HintPath>..\packages\ControlzEx.4.4.0\lib\net462\ControlzEx.dll</HintPath>
+    </Reference>
     <Reference Include="MahApps.Metro.IconPacks, Version=6.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
       <HintPath>..\packages\MahApps.Metro.IconPacks.6.1.0\lib\net47\MahApps.Metro.IconPacks.dll</HintPath>
     </Reference>
@@ -164,10 +167,15 @@
     <Reference Include="MahApps.Metro.IconPacks.Zondicons, Version=6.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
       <HintPath>..\packages\MahApps.Metro.IconPacks.Zondicons.6.1.0\lib\net47\MahApps.Metro.IconPacks.Zondicons.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Xaml.Behaviors.Wpf.1.1.19\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationFramework.Aero2, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\PresentationFramework.Aero2.1.0.1\lib\PresentationFramework.Aero2.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -195,9 +203,6 @@
     <Compile Include="Views\Admin\CatalogPG.xaml.cs">
       <DependentUpon>CatalogPG.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Admin\LogsPG.xaml.cs">
-      <DependentUpon>LogsPG.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\Admin\RBAControlPG.xaml.cs">
       <DependentUpon>RBAControlPG.xaml</DependentUpon>
     </Compile>
@@ -213,11 +218,11 @@
     <Compile Include="Views\Manager\ClientsPG.xaml.cs">
       <DependentUpon>ClientsPG.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Manager\CRMPG.xaml.cs">
+      <DependentUpon>CRMPG.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Manager\MHomePG.xaml.cs">
       <DependentUpon>MHomePG.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Manager\OrdersPG.xaml.cs">
-      <DependentUpon>OrdersPG.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\PersonAccountPG.xaml.cs">
       <DependentUpon>PersonAccountPG.xaml</DependentUpon>
@@ -290,10 +295,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Admin\LogsPG.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Views\Admin\RBAControlPG.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -314,11 +315,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Manager\MHomePG.xaml">
+    <Page Include="Views\Manager\CRMPG.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Manager\OrdersPG.xaml">
+    <Page Include="Views\Manager\MHomePG.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

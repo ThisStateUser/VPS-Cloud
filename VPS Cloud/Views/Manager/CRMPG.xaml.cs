@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace VPS_Cloud.Views.Manager
 {
     /// <summary>
-    /// Логика взаимодействия для OrdersPG.xaml
+    /// Логика взаимодействия для CRMPG.xaml
     /// </summary>
-    public partial class OrdersPG : Page
+    public partial class CRMPG : Page
     {
-        public OrdersPG()
+        public CRMPG()
         {
             InitializeComponent();
         }
